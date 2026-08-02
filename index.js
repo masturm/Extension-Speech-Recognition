@@ -7,6 +7,7 @@ import { saveSettingsDebounced, sendMessageAsUser } from '../../../../script.js'
 import { getContext, extension_settings, ModuleWorkerWrapper } from '../../../extensions.js';
 import { VoskSttProvider } from './vosk.js';
 import { WhisperExtrasSttProvider } from './whisper-extras.js';
+import { WhisperCppSttProvider } from './whisper-cpp.js';
 import { OpenAISttProvider } from './whisper-openai.js';
 import { WhisperLocalSttProvider } from './whisper-local.js';
 import { BrowserSttProvider } from './browser.js';
@@ -38,6 +39,7 @@ let sttProviders = {
     'OpenAI': OpenAISttProvider,
     'Whisper (Extras)': WhisperExtrasSttProvider,
     'Whisper (Local)': WhisperLocalSttProvider,
+    'Whisper.cpp': WhisperCppSttProvider,
     'Z.AI': ZaiSttProvider,
     Vosk: VoskSttProvider,
     Streaming: StreamingSttProvider,
