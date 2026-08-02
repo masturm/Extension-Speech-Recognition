@@ -50,7 +50,7 @@ class WhisperCppSttProvider {
         const serverUrl = this.settings.server_url.replace(/\/+$/, '');
 
         const requestData = new FormData();
-        requestData.append('audiofile', audioBlob, 'record.wav');
+        requestData.append('file', audioBlob, 'record.wav');
 
         if (this.settings.language && this.settings.language.trim() !== '') {
             requestData.append('language', this.settings.language);
